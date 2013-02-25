@@ -10,47 +10,43 @@
 	<link rel="stylesheet" type="text/css" href="<?php echo Yii::app()->request->baseUrl; ?>/css/main.css" />
 	<!--[if lt IE 8]>
 	<link rel="stylesheet" type="text/css" href="<?php echo Yii::app()->request->baseUrl; ?>/css/ie.css" media="screen, projection" />
-	<![endif]-->
-	
-	<link rel="stylesheet" type="text/css" href="<?php echo Yii::app()->request->baseUrl; ?>/css/form.css" />
-
-	<title><?php echo CHtml::encode($this->pageTitle); ?></title>
+	<![endif]-->	
+    <link rel="stylesheet" type="text/css" href="<?php echo Yii::app()->request->baseUrl; ?>/css/form.css" />
+    
+    <!-- php code -->
+    <title>
+        <?php echo CHtml::encode($this->pageTitle); ?>
+    </title>
 </head>
 
 <body>
 <div class="container" id="page">
 <div id="main">
+<!-- php code -->
 <?php 
-	$this->widget('zii.widgets.CMenu',array(
-			'items'=>array(
-				array('label'=>'Home', 'url'=>array('/site/index')),
-				array('label'=>'Cinema', 'url'=>array('/site/cinemas')),
-				array('label'=>'About', 'url'=>array('/site/about')),
-				array('label'=>'Contact Us', 'url'=>array('/site/contact')),
-				array('label'=>'Login', 'url'=>array('/site/login'))
-					),
-			));
+$this->widget('zii.widgets.CMenu',array(
+'items'=>array(
+array('label'=>'Home', 'url'=>array('/site/index')),
+array('label'=>'Cinema', 'url'=>array('/site/cinemas')),
+array('label'=>'About', 'url'=>array('/site/about')),
+array('label'=>'Contact Us', 'url'=>array('/site/contact')),
+)));
 ?>
+<div name="search" style="float: left; position:absolute;">
+<input type="text" name="search"/>
+<button name="searchsubmit">
+    <img src="<?php echo Yii::app()->request->baseUrl; ?>/images/werefaicon.ico"/>
+</button>
+</div>
 </div>
 <br/><br/><br/>
-	<div id="header">
-		<div id="logo">
-	</div><!-- header -->
+<div id="header">
+<div id="logo">
+</div><!-- header -->
+<!-- php code -->
+<?php echo $content; ?>
 
-	<?php echo $content; ?>
-	<!-- <div id="footer">
-	<?php 
-	/*
-	 	$this->widget('zii.widgets.CMenu',array(
-			'items'=>array(
-					),
-			));
-	*/
-	?>
-	</div>
- -->
 </div>
-<!-- page -->
 </div>
 </body>
 </html>

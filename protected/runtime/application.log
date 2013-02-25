@@ -5827,3 +5827,95 @@ Stack trace:
 REQUEST_URI=/ras/index.php/admin/upload
 HTTP_REFERER=http://localhost:8080/ras/index.php/site/login?1=1--
 ---
+2013/02/13 08:47:53 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'You are not authorized to perform this action.' in C:\inetpub\wwwroot\ras\framework\web\auth\CAccessControlFilter.php:157
+Stack trace:
+#0 C:\inetpub\wwwroot\ras\framework\web\auth\CAccessControlFilter.php(120): CAccessControlFilter->accessDenied(Object(WebUser), 'You are not aut...')
+#1 C:\inetpub\wwwroot\ras\framework\web\filters\CFilter.php(39): CAccessControlFilter->preFilter(Object(CFilterChain))
+#2 C:\inetpub\wwwroot\ras\framework\web\CController.php(1146): CFilter->filter(Object(CFilterChain))
+#3 C:\inetpub\wwwroot\ras\framework\web\filters\CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#4 C:\inetpub\wwwroot\ras\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#5 C:\inetpub\wwwroot\ras\framework\web\CController.php(292): CFilterChain->run()
+#6 C:\inetpub\wwwroot\ras\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 C:\inetpub\wwwroot\ras\framework\web\CWebApplication.php(276): CController->run('upload')
+#8 C:\inetpub\wwwroot\ras\framework\web\CWebApplication.php(135): CWebApplication->runController('admin/upload')
+#9 C:\inetpub\wwwroot\ras\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#10 C:\inetpub\wwwroot\ras\index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/ras/index.php/admin/upload
+---
+2013/02/13 08:47:54 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'You are not authorized to perform this action.' in C:\inetpub\wwwroot\ras\framework\web\auth\CAccessControlFilter.php:157
+Stack trace:
+#0 C:\inetpub\wwwroot\ras\framework\web\auth\CAccessControlFilter.php(120): CAccessControlFilter->accessDenied(Object(WebUser), 'You are not aut...')
+#1 C:\inetpub\wwwroot\ras\framework\web\filters\CFilter.php(39): CAccessControlFilter->preFilter(Object(CFilterChain))
+#2 C:\inetpub\wwwroot\ras\framework\web\CController.php(1146): CFilter->filter(Object(CFilterChain))
+#3 C:\inetpub\wwwroot\ras\framework\web\filters\CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#4 C:\inetpub\wwwroot\ras\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#5 C:\inetpub\wwwroot\ras\framework\web\CController.php(292): CFilterChain->run()
+#6 C:\inetpub\wwwroot\ras\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 C:\inetpub\wwwroot\ras\framework\web\CWebApplication.php(276): CController->run('upload')
+#8 C:\inetpub\wwwroot\ras\framework\web\CWebApplication.php(135): CWebApplication->runController('admin/upload')
+#9 C:\inetpub\wwwroot\ras\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#10 C:\inetpub\wwwroot\ras\index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/ras/index.php/admin/upload
+---
+2013/02/13 14:19:29 [error] [exception.Zend_Gdata_App_HttpException] exception 'Zend_Gdata_App_HttpException' with message 'Read timed out after 10 seconds' in C:\inetpub\wwwroot\ras\protected\vendors\Zend\Gdata\App.php:693
+Stack trace:
+#0 C:\inetpub\wwwroot\ras\protected\vendors\Zend\Gdata.php(221): Zend_Gdata_App->performHttpRequest('GET', 'http://gdata.yo...', Array, NULL, NULL, NULL)
+#1 C:\inetpub\wwwroot\ras\protected\vendors\Zend\Gdata\App.php(880): Zend_Gdata->performHttpRequest('GET', 'http://gdata.yo...', Array)
+#2 C:\inetpub\wwwroot\ras\protected\vendors\Zend\Gdata\App.php(768): Zend_Gdata_App->get('http://gdata.yo...', NULL)
+#3 C:\inetpub\wwwroot\ras\protected\vendors\Zend\Gdata\App.php(210): Zend_Gdata_App->importUrl('http://gdata.yo...', 'Zend_Gdata_YouT...', NULL)
+#4 C:\inetpub\wwwroot\ras\protected\vendors\Zend\Gdata.php(162): Zend_Gdata_App->getFeed('http://gdata.yo...', 'Zend_Gdata_YouT...')
+#5 C:\inetpub\wwwroot\ras\protected\vendors\Zend\Gdata\YouTube.php(539): Zend_Gdata->getFeed('http://gdata.yo...', 'Zend_Gdata_YouT...')
+#6 C:\inetpub\wwwroot\ras\protected\controllers\SiteController.php(61): Zend_Gdata_YouTube->getPlaylistVideoFeed(Object(Zend_Gdata_YouTube_VideoQuery))
+#7 C:\inetpub\wwwroot\ras\framework\web\actions\CInlineAction.php(50): SiteController->actionIndex()
+#8 C:\inetpub\wwwroot\ras\framework\web\CController.php(309): CInlineAction->runWithParams(Array)
+#9 C:\inetpub\wwwroot\ras\framework\web\CController.php(287): CController->runAction(Object(CInlineAction))
+#10 C:\inetpub\wwwroot\ras\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#11 C:\inetpub\wwwroot\ras\framework\web\CWebApplication.php(276): CController->run('')
+#12 C:\inetpub\wwwroot\ras\framework\web\CWebApplication.php(135): CWebApplication->runController('')
+#13 C:\inetpub\wwwroot\ras\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#14 C:\inetpub\wwwroot\ras\index.php(13): CApplication->run()
+#15 {main}
+REQUEST_URI=/ras/index.php
+---
+2013/02/13 14:19:49 [error] [exception.Zend_Gdata_App_HttpException] exception 'Zend_Gdata_App_HttpException' with message 'Read timed out after 10 seconds' in C:\inetpub\wwwroot\ras\protected\vendors\Zend\Gdata\App.php:693
+Stack trace:
+#0 C:\inetpub\wwwroot\ras\protected\vendors\Zend\Gdata.php(221): Zend_Gdata_App->performHttpRequest('GET', 'http://gdata.yo...', Array, NULL, NULL, NULL)
+#1 C:\inetpub\wwwroot\ras\protected\vendors\Zend\Gdata\App.php(880): Zend_Gdata->performHttpRequest('GET', 'http://gdata.yo...', Array)
+#2 C:\inetpub\wwwroot\ras\protected\vendors\Zend\Gdata\App.php(768): Zend_Gdata_App->get('http://gdata.yo...', NULL)
+#3 C:\inetpub\wwwroot\ras\protected\vendors\Zend\Gdata\App.php(210): Zend_Gdata_App->importUrl('http://gdata.yo...', 'Zend_Gdata_YouT...', NULL)
+#4 C:\inetpub\wwwroot\ras\protected\vendors\Zend\Gdata.php(162): Zend_Gdata_App->getFeed('http://gdata.yo...', 'Zend_Gdata_YouT...')
+#5 C:\inetpub\wwwroot\ras\protected\vendors\Zend\Gdata\YouTube.php(539): Zend_Gdata->getFeed('http://gdata.yo...', 'Zend_Gdata_YouT...')
+#6 C:\inetpub\wwwroot\ras\protected\controllers\SiteController.php(61): Zend_Gdata_YouTube->getPlaylistVideoFeed(Object(Zend_Gdata_YouTube_VideoQuery))
+#7 C:\inetpub\wwwroot\ras\framework\web\actions\CInlineAction.php(50): SiteController->actionIndex()
+#8 C:\inetpub\wwwroot\ras\framework\web\CController.php(309): CInlineAction->runWithParams(Array)
+#9 C:\inetpub\wwwroot\ras\framework\web\CController.php(287): CController->runAction(Object(CInlineAction))
+#10 C:\inetpub\wwwroot\ras\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#11 C:\inetpub\wwwroot\ras\framework\web\CWebApplication.php(276): CController->run('')
+#12 C:\inetpub\wwwroot\ras\framework\web\CWebApplication.php(135): CWebApplication->runController('')
+#13 C:\inetpub\wwwroot\ras\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#14 C:\inetpub\wwwroot\ras\index.php(13): CApplication->run()
+#15 {main}
+REQUEST_URI=/ras/index.php
+---
+2013/02/13 14:20:39 [error] [exception.Zend_Gdata_App_HttpException] exception 'Zend_Gdata_App_HttpException' with message 'Read timed out after 10 seconds' in C:\inetpub\wwwroot\ras\protected\vendors\Zend\Gdata\App.php:693
+Stack trace:
+#0 C:\inetpub\wwwroot\ras\protected\vendors\Zend\Gdata.php(221): Zend_Gdata_App->performHttpRequest('GET', 'http://gdata.yo...', Array, NULL, NULL, NULL)
+#1 C:\inetpub\wwwroot\ras\protected\vendors\Zend\Gdata\App.php(880): Zend_Gdata->performHttpRequest('GET', 'http://gdata.yo...', Array)
+#2 C:\inetpub\wwwroot\ras\protected\vendors\Zend\Gdata\App.php(768): Zend_Gdata_App->get('http://gdata.yo...', NULL)
+#3 C:\inetpub\wwwroot\ras\protected\vendors\Zend\Gdata\App.php(210): Zend_Gdata_App->importUrl('http://gdata.yo...', 'Zend_Gdata_YouT...', NULL)
+#4 C:\inetpub\wwwroot\ras\protected\vendors\Zend\Gdata.php(162): Zend_Gdata_App->getFeed('http://gdata.yo...', 'Zend_Gdata_YouT...')
+#5 C:\inetpub\wwwroot\ras\protected\vendors\Zend\Gdata\YouTube.php(539): Zend_Gdata->getFeed('http://gdata.yo...', 'Zend_Gdata_YouT...')
+#6 C:\inetpub\wwwroot\ras\protected\controllers\SiteController.php(61): Zend_Gdata_YouTube->getPlaylistVideoFeed(Object(Zend_Gdata_YouTube_VideoQuery))
+#7 C:\inetpub\wwwroot\ras\framework\web\actions\CInlineAction.php(50): SiteController->actionIndex()
+#8 C:\inetpub\wwwroot\ras\framework\web\CController.php(309): CInlineAction->runWithParams(Array)
+#9 C:\inetpub\wwwroot\ras\framework\web\CController.php(287): CController->runAction(Object(CInlineAction))
+#10 C:\inetpub\wwwroot\ras\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#11 C:\inetpub\wwwroot\ras\framework\web\CWebApplication.php(276): CController->run('')
+#12 C:\inetpub\wwwroot\ras\framework\web\CWebApplication.php(135): CWebApplication->runController('')
+#13 C:\inetpub\wwwroot\ras\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#14 C:\inetpub\wwwroot\ras\index.php(13): CApplication->run()
+#15 {main}
+REQUEST_URI=/ras/index.php
+---

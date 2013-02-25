@@ -39,22 +39,22 @@ body
 
 #main li, #main a
 {
+	color:#0066FF;
+	width:auto;
 	margin-right: 20px;
 	list-style: none;
 	display: inline;
 	padding-left: 20px;
 	text-decoration: none;
-	background-repeat: no-repeat;
-	font-family: "calibre-1", "calibre-2", helvetica, arial, sans-serif;
+	font-family: Vardian, calibre-1, calibre-2, helvetica, arial, sans-serif;
 	font-weight: bold;
 	font-size: 12px;
-	color: #123;
 	text-transform: uppercase;
 }
 
 #main li:hover, #main a:hover
 {	
-	color: #13A;
+	color:#000000;
 }
 
 #sidebar

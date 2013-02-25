@@ -1,51 +1,67 @@
 <h3><i>Movie Catalog</i></h3>
-<?php
 
+<?php
 $assetUrl=Yii::app()->request->baseUrl;
 $i=0;
 //foreach movies in the database
 foreach ($feed as $enter) {
-echo 
-"<li style='background:transparent;list-style: none;'>
+?> 
+
+<li style='background:transparent;list-style: none;'>
 <div>
 <div class='video-content'>
-<a width='138' height='120' href='#'>".
+<a width='138' height='120' href='#'>
+<!-- php code -->
+<?php
 //image of the movie
-CHtml::image($enter->mediaGroup->thumbnail[0]->url,
-$enter->mediaGroup->thumbnail[0]->url, array(
+echo CHtml::image($enter->mediaGroup->thumbnail[2]->url,
+$enter->mediaGroup->thumbnail[2]->url, array(
 'onclick'=>'$("#mydialog'.$i.'").dialog("open");
 return false;',
 'class'=>'a-image',
 'alt'=>"Thumbnail",
 'width'=>"138",
 'height'=>"120",
-'data-group-key'=>"thumb-group-2"
-)).
-"<div  class='div-PlayImage'>".
-CHtml::image($assetUrl.'/images/play.gif', $assetUrl.'/images/play.gif', array(
+'data-group-key'=>"thumb-group-2"));
+?>
+
+<div  class='div-PlayImage'>
+<!-- php code -->
+<?php
+echo CHtml::image($assetUrl.'/images/play.gif', $assetUrl.'/images/play.gif', array(
 		'onclick'=>'$("#mydialog'.$i.'").dialog("open");
 		return false;',
 		'alt'=>"Thumbnail",
 		'data-thumb'=>$assetUrl.'/images/play.gif',
-		'data-group-key'=>"thumb-group-2"
-)).
-"</div>
+		'data-group-key'=>"thumb-group-2"));
+?>
+
+</div>
 </a>
-<div class='description'>".
+<div class='description'>
+    
+<?php
 //link to the cinema where it is shown
-CHtml::link($enter->title,
+echo CHtml::link($enter->title,
 array('cinema',
 'movie'=>$enter->title),
 array('class'=>'',
 'dir'=>'ltr','title',
-'onclick'=> 'var jvar='.$enter->title,
-))."</br>".
-CHtml::label('Description:- '.$enter->content,"#",
+'onclick'=> 'var jvar='.$enter->title,));
+?>
+
+</br>
+
+<?php
+echo CHtml::label('Description:- '.$enter->content,"#",
 array(
 'class'=>'result-item-translation-title',
-'dir'=>'','title'
-)).
-"</div></div></div></li></br>";
+'dir'=>'','title'));
+?>
+
+</div></div></div></li></br>
+
+<?php
 //the dialog for the video widget
 $this->beginWidget('zii.widgets.jui.CJuiDialog', array(
 'id'=>'mydialog'.$i,
@@ -61,13 +77,12 @@ $this->beginWidget('zii.widgets.jui.CJuiDialog', array(
 'width'=>'670',
 'height'=>'400',
 'resizable'=>false,	
-'close'=>'js:function(){ stopVideo(); }')
-));
-//the video widget embeded video file from youtube
-//echo '<iframe id="player" type="text/html" width="640px" height="360px"
-//src="http://www.youtube.com/embed/'.$enter->getVideoId().'?enablejsapi=1&origin=http://localhost:8080"frameborder="0"></iframe>';
-echo "<div id='player".$i."'></div>";
+'close'=>'js:function(){ stopVideo(); }')));
+?>
 
+<div id='player<?php echo $i;?>'></div>
+
+<?php
 $this->endWidget('zii.widgets.jui.CJuiDialog');
 $i++;
 }
